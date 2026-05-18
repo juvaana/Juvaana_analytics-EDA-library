@@ -1,0 +1,67 @@
+name: Juvaana Analytics CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.10"]
+
+    steps:
+
+      # -----------------------------------
+      # CHECKOUT REPOSITORY
+      # -----------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # -----------------------------------
+      # SETUP PYTHON
+      # -----------------------------------
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # -----------------------------------
+      # INSTALL DEPENDENCIES
+      # -----------------------------------
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install build setuptools wheel
+          pip install pandas numpy matplotlib seaborn plotly
+
+      # -----------------------------------
+      # INSTALL PACKAGE
+      # -----------------------------------
+      - name: Install Juvaana Analytics
+        run: |
+          pip install -e .
+
+      # -----------------------------------
+      # BUILD PACKAGE
+      # -----------------------------------
+      - name: Build package
+        run: |
+          python -m build
+
+      # -----------------------------------
+      # SUCCESS MESSAGE
+      # -----------------------------------
+      - name: Finished
+        run: echo "Juvaana Analytics package built successfully"
