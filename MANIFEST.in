@@ -1,0 +1,4 @@
+exclude examples/*
+exclude *.csv
+exclude *.html
+exclude __pycache__/*

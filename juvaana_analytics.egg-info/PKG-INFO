@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: juvaana-analytics
+Version: 0.1.0
+Summary: Interactive EDA + Visualization + HTML reporting library
+Author: Juvaana Team
+Requires-Python: >=3.8
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: plotly
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
