@@ -1,4 +1,6 @@
+LICENSE
 MANIFEST.in
+README.md
 pyproject.toml
 setup.py
 juvaana_analytics/__init__.py

@@ -1,15 +1,36 @@
 Metadata-Version: 2.4
 Name: juvaana-analytics
-Version: 0.1.0
+Version: 0.2.1
 Summary: Interactive EDA + Visualization + HTML reporting library
 Author: Juvaana Team
 Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
 Requires-Dist: pandas
 Requires-Dist: numpy
 Requires-Dist: matplotlib
 Requires-Dist: seaborn
 Requires-Dist: plotly
 Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
 Dynamic: requires-dist
 Dynamic: requires-python
 Dynamic: summary
+
+# Juvaana Analytics
+
+Juvaana Analytics is a Python library for interactive Exploratory Data Analysis (EDA), visualization, and HTML reporting.
+
+## Features
+- Interactive graphs (scatter, line, bar, histogram, box plots)
+- Correlation analysis
+- Automated dataset profiling
+- HTML report generation
+- Extensible analytics engine
+
+## Installation
+
+```bash
+pip install juvaana-analytics
